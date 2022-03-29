@@ -1,13 +1,19 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.chrome.options import Options
 import argparse
 import time
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--disable-dev-shm-usage')
 
 class Report(object):
     def __init__(self,username,password):
         self.username = username
         self.password = password
-        self.driver = webdriver.Chrome('/usr/local/bin/chromedriver/chromedriver')
+        self.driver = webdriver.Chrome('/usr/local/bin/chromedriver/chromedriver',chrome_options=chrome_options)
     def login(self):
         #enter the page
         self.driver.get("https://weixine.ustc.edu.cn/2020/home")
