@@ -38,4 +38,4 @@ jobs:
         STUID: ${{ secrets.Stuid }}
         PASSWORD: ${{ secrets.Password }}
       run: |
-        python autoreport.py "$STUID" "$PASSWORD"
+        python autoreport.py PB20020586 G4211252003TSCC
