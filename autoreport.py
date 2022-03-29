@@ -3,14 +3,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 import argparse
 import time
 
-# username = "PB20020586"
-# password = "G4211252003TSCC"
-
 class Report(object):
     def __init__(self,username,password):
         self.username = username
         self.password = password
-        self.driver =  webdriver.Chrome("E:\wh030917\chromedriver_win32\chromedriver")
+        self.driver =  webdriver.Chrome("/usr/bin/chromedriver")
     def login(self):
         #enter the page
         self.driver.get("https://weixine.ustc.edu.cn/2020/home")
