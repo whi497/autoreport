@@ -1,0 +1,1 @@
+py C:\Users\wh030917\Desktop\workspace\autologin\autoreport.py .py PB20020586 G4211252003TSCC
